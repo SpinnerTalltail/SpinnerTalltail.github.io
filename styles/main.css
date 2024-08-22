@@ -1,0 +1,14 @@
+/* Making it harder for users to select and copy data on this page. */
+p {
+    user-select: none;
+}
+
+/* Stopping the user from printing 
+   this web page.
+*/
+@media print {
+    html, body {
+        /* Hide the entire page. */
+        display: none;
+    }
+}
