@@ -1,6 +1,7 @@
 /* Making it harder for users to select and copy data on this page. */
 p {
     user-select: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Stopping the user from printing 
@@ -11,4 +12,8 @@ p {
         /* Hide the entire page. */
         display: none;
     }
+}
+
+h1, h2, h3 {
+    font-family: 'Courier New', monospace;
 }
