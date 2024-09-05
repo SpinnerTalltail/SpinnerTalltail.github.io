@@ -2,6 +2,7 @@
 p {
     user-select: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 2%;
 }
 
 /* Stopping the user from printing 
