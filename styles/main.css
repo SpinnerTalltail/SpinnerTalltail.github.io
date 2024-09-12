@@ -1,8 +1,24 @@
 /* Making it harder for users to select and copy data on this page. */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    background: linear-gradient(-45deg, #FF5CC3, #D38BEE, #23a6d5, #F6B561);
+	background-size: 400% 400%;
+	animation: gradient01 20s cubic-bezier(.17,.66,1,.48) infinite;
+	height: 100vh;
+}
+
 p {
     user-select: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-indent: 2%;
+    font-size: 95%;
+}
+
+footer p {
+    text-align: right;
+    text-indent:0%;
+    font-size: 80%;
 }
 
 /* Stopping the user from printing 
@@ -17,4 +33,68 @@ p {
 
 h1, h2, h3 {
     font-family: 'Courier New', monospace;
+}
+
+header {
+    text-align: center;
+    text-decoration: underline;
+}
+
+header h1 {
+    font-size: 220%;
+    text-shadow: 2px 2px 2px grey;
+}
+
+main h1 {
+    font-size: 170%;
+    font-style: bold;
+}
+
+main h2 {
+    font-style: italic;
+    font-size: 130%;
+}
+
+main {
+    clear: left;
+}
+
+a {
+    font-weight: bold;
+}
+
+a:link {
+    color:rgb(13, 68, 80);
+}
+a:visited {
+    color:rgb(150, 72, 193);
+}
+
+a:hover, a:focus {
+    --bgSize: 400%;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, violet) 0 0 / var(--bgSize) 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: black;
+    animation: moveBackground 5s linear infinite;
+}
+
+
+@keyframes gradient01 {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes moveBackground {
+    to {
+        background-position: var(--bgSize) 0;
+    }
 }
