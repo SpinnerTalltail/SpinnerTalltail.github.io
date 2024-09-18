@@ -53,6 +53,7 @@ main h1 {
 main h2 {
     font-style: italic;
     font-size: 130%;
+    text-align: center;
 }
 
 main {
@@ -74,6 +75,7 @@ a:hover, a:focus {
     --bgSize: 400%;
     background: linear-gradient(to right, red, orange, yellow, green, blue, violet) 0 0 / var(--bgSize) 100%;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: underline;
     text-decoration-color: black;
