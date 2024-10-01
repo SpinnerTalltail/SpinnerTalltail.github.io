@@ -1,4 +1,8 @@
-/* Making it harder for users to select and copy data on this page. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
@@ -13,12 +17,19 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-indent: 2%;
     font-size: 95%;
+    padding: .25em 0;
 }
 
 footer p {
     text-align: right;
     text-indent:0%;
     font-size: 80%;
+    margin: 1em 1em 1em 1em;
+}
+
+footer {
+    margin: 3em 3em 3em 3em;
+    padding: 10px;
 }
 
 /* Stopping the user from printing 
@@ -33,6 +44,7 @@ footer p {
 
 h1, h2, h3 {
     font-family: 'Courier New', monospace;
+    margin-bottom: .25em;
 }
 
 header {
@@ -60,6 +72,12 @@ main {
     clear: left;
 }
 
+section {
+    margin: 1em 1em 1em 1em;
+    padding: 10px;
+    border: 3px dotted lavender;
+}
+
 a {
     font-weight: bold;
 }
@@ -82,6 +100,29 @@ a:hover, a:focus {
     animation: moveBackground 5s linear infinite;
 }
 
+img {
+    margin: 1em 1em 1em 1em;
+    width: 100%;
+    max-width: 300px;
+    
+}
+
+ul {
+    margin: 0 0 1.5em 1.25em;
+}
+
+li {
+    font-size: 95%;
+    padding-bottom: .35em;
+    padding-left: .25em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 @keyframes gradient01 {
 	0% {
