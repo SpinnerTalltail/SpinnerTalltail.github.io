@@ -8,7 +8,7 @@ body {
     font-size: 100%;
     background: linear-gradient(-45deg, #FF5CC3, #D38BEE, #23a6d5, #F6B561);
 	background-size: 400% 400%;
-	animation: gradient01 20s cubic-bezier(.17,.66,1,.48) infinite;
+	animation: gradient01 30s cubic-bezier(.17,.66,1,.48) infinite;
 	height: 100vh;
 }
 
@@ -30,6 +30,9 @@ footer p {
 footer {
     margin: 3em 3em 3em 3em;
     padding: 10px;
+    /*TBD: Make a pixel grass and cat background that remains fixed
+      bedhind the footer as a background-image or 
+      background-attachment. page 163 */
 }
 
 /* Stopping the user from printing 
@@ -45,6 +48,8 @@ footer {
 h1, h2, h3 {
     font-family: 'Courier New', monospace;
     margin-bottom: .25em;
+    text-shadow: 3px 3px 3px rgb(168, 139, 168);
+    text-decoration: underline;
 }
 
 header {
@@ -60,6 +65,9 @@ header h1 {
 main h1 {
     font-size: 170%;
     font-style: bold;
+    /*TBD: Make a pixel cloud background that remains fixed
+      bedhind the main header as a background-image or 
+      background-attachment. page 163 */
 }
 
 main h2 {
@@ -76,6 +84,7 @@ section {
     margin: 1em 1em 1em 1em;
     padding: 10px;
     border: 3px dotted lavender;
+    background-color: rgb(216, 191, 228);
 }
 
 a {
