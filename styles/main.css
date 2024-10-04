@@ -30,6 +30,7 @@ footer p {
 footer {
     margin: 3em 3em 3em 3em;
     padding: 10px;
+    border-top: 2px solid rgb(216, 191, 228);
     /*TBD: Make a pixel grass and cat background that remains fixed
       bedhind the footer as a background-image or 
       background-attachment. page 163 */
@@ -84,7 +85,9 @@ section {
     margin: 1em 1em 1em 1em;
     padding: 10px;
     border: 3px dotted lavender;
+    border-radius: 25px;
     background-color: rgb(216, 191, 228);
+    box-shadow: 5px 5px 0 rgb(171, 98, 193);
 }
 
 a {
