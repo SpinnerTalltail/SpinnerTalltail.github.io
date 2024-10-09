@@ -71,7 +71,6 @@ main h2 {
 section {
     margin: 1em 1em 1em 1em;
     padding: 10px;
-    width: 66%;
     flex-direction: row;
     border: 3px dotted lavender;
     border-radius: 25px;
@@ -79,6 +78,7 @@ section {
     box-shadow: 5px 5px 0 rgb(171, 98, 193);
 }
 
+/* I just hated how it looked on different devices.
 aside {
     height: 200px;
     width: 25%;
@@ -95,6 +95,8 @@ aside {
 aside h2, aside h3 {
     text-shadow: 3px 3px 8px rgba(21, 85, 108, 0.982);
 }
+
+*/
 
 footer {
     margin: 3em 1em 1em 1em;
