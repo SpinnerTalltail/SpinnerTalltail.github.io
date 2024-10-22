@@ -11,15 +11,20 @@
     <body>
         <header>
             <h1>My Knowledge Portfolio</h1>
-            <nav>
-
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="myProjects">My Projects</a></li>
+                    <li><a href="contactMe" class="lastItem">Contact Me</a></li>
+                </ul>
             </nav>
         </header>
         <main>
             <p><strong>Website Status:</strong> More to come . . . Busy creating my own assets.</p>
 
             <section>
-                <h2>About Me</h2>
+                <h2 id="aboutMe">About Me</h2>
+                <!-- TODO Change to ordered lists with customizations -->
                 <p>
                     I do daily coding challenges using <a href="https://www.codewars.com">Code Wars.</a> It's free, and I think it is organized the best of everywhere I have tried. My main focus there is JavaScript at this time. You can view my <a href="https://www.codewars.com/users/SpinnerTalltail">portfolio</a> and <a href="https://www.codewars.com/users/SpinnerTalltail/completed_solutions">my kata (code) solutions</a> in these embedded links.
                 </p>
@@ -30,7 +35,7 @@
             </section>
 
             <section>
-                <h2>My Projects</h2>
+                <h2 id="myProjects">My Projects</h2>
                 <p>
                     I made this webpage from scratch. Important elements about this page will be added here as I create them.
                 </p>
@@ -39,8 +44,13 @@
                 </p>
             </section>
             
+            <section>
+                <h2 id="contactMe">Contact Me</h2>
+
+            </section>
         </main>
         <footer>
+            <p id="toTop"><a href="#">Return to Top</a></p>
             <p>Created by: Jessica P. Jones</p>
             <p>&copy; 2024 &nbsp; All rights reserved.</p>
         </footer>

@@ -71,7 +71,7 @@ main h2 {
 section {
     margin: 1em 1em 1em 1em;
     padding: 10px;
-    flex-direction: row;
+    /* flex-direction: row; */
     border: 3px dotted lavender;
     border-radius: 25px;
     background-color: rgb(216, 191, 228);
@@ -153,6 +153,40 @@ li {
     font-size: 95%;
     padding-bottom: .35em;
     padding-left: .25em;
+}
+
+#navMenu ul {
+    list-style-type: none;
+    padding: 1em 0;
+    text-align: center;
+    display: inline-block;
+}
+
+#navMenu ul li {
+    float: left;
+    padding: 0 1em;
+}
+
+#navMenu ul li a {
+    font-weight: bold;
+    color: rgb(13, 68, 80);
+    text-align: center;
+    display: block;
+    width: 175px;
+    padding: .5em 0;
+    text-decoration: none;
+    background-color:rgb(130, 192, 188);
+    border-radius: 25px;
+    border: 3px solid teal;
+}
+
+#navMenu ul li a.current {
+    color:rgb(150, 72, 193);
+}
+
+#toTop {
+    text-align: center;
+    font-size: 95%;
 }
 
 .center {
