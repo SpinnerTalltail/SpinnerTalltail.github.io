@@ -3,6 +3,47 @@
     padding: 0;
 }
 
+/* Stopping the user from printing 
+   this web page.
+*/
+@media print {
+    html, body {
+        /* Hide the entire page. */
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    #nav_menu {
+        display: none !important;
+    }
+    #mobile_menu {
+        display: block !important;
+    }
+    .slicknav_menu {
+        background-color: rgb(136, 220, 235) !important;
+    }
+    section img {
+        max-width: 200px !important;
+    }
+}
+
+@media only screen and (min-width: 412px) and (max-width: 520px){
+    li {
+        font-size: 85% !important;
+    }
+    #mobile_menu {
+        display: none;
+    }
+    #nav_menu {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 521px) {
+    /* Regular display values. */
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
@@ -14,22 +55,26 @@ body {
     max-width: 2560px;
 }
 
-p {
-    user-select: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-indent: 2%;
-    font-size: 95%;
-    padding: .25em 0;
+a {
+    font-weight: bold;
 }
 
-/* Stopping the user from printing 
-   this web page.
-*/
-@media print {
-    html, body {
-        /* Hide the entire page. */
-        display: none;
-    }
+a:link {
+    color:rgb(13, 68, 80);
+}
+a:visited {
+    color:rgb(150, 72, 193);
+}
+
+a:hover, a:focus {
+    --bgSize: 400%;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, violet) 0 0 / var(--bgSize) 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: black;
+    animation: moveBackground 5s linear infinite;
 }
 
 h1, h2, h3 {
@@ -38,6 +83,24 @@ h1, h2, h3 {
     text-shadow: 3px 3px 8px rgba(139, 50, 167, 0.982);
     text-decoration: underline;
     padding: 0em 0em .5em 0em;
+}
+
+p {
+    user-select: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 2%;
+    font-size: 95%;
+    padding: .25em 0;
+}
+
+ul {
+    margin: 0 0 1.5em 1.25em;
+}
+
+li {
+    font-size: 95%;
+    padding-bottom: .35em;
+    padding-left: .25em;
 }
 
 header {
@@ -51,6 +114,48 @@ header {
 header h1 {
     font-size: 220%;
     text-shadow: 2px 2px 2px grey;
+}
+
+nav {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 2560px;
+    overflow: hidden;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    padding: 1em 0;
+    text-align: center;
+    display: inline-block;
+}
+
+#nav_menu ul li {
+    float: left;
+    padding: 0 1em;
+}
+
+#nav_menu ul li a {
+    font-weight: bold;
+    color: rgb(13, 68, 80);
+    text-align: center;
+    display: block;
+    width: 110%;  /* formerly 175px */
+    padding: .5em 0;
+    text-decoration: none;
+    background-color:rgb(130, 192, 188);
+    border-radius: 25px;
+    border: 3px solid teal;
+}
+
+#nav_menu ul li a.current {
+    color:rgb(150, 72, 193);
 }
 
 main {
@@ -82,6 +187,13 @@ section {
     border-radius: 25px;
     background-color: rgb(216, 191, 228);
     box-shadow: 5px 5px 0 rgb(171, 98, 193);
+}
+
+section img {
+    margin: 1em 1em 1em 1em;
+    width: 100%;
+    max-width: 250px;
+    position: relative;
 }
 
 /* I just hated how it looked on different devices.
@@ -119,78 +231,6 @@ footer p {
     text-indent:0%;
     font-size: 80%;
     margin: 1em 1em 1em 1em;
-}
-
-a {
-    font-weight: bold;
-}
-
-a:link {
-    color:rgb(13, 68, 80);
-}
-a:visited {
-    color:rgb(150, 72, 193);
-}
-
-a:hover, a:focus {
-    --bgSize: 400%;
-    background: linear-gradient(to right, red, orange, yellow, green, blue, violet) 0 0 / var(--bgSize) 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-decoration: underline;
-    text-decoration-color: black;
-    animation: moveBackground 5s linear infinite;
-}
-
-img {
-    margin: 1em 1em 1em 1em;
-    width: 100%;
-    max-width: 300px;
-}
-
-ul {
-    margin: 0 0 1.5em 1.25em;
-}
-
-li {
-    font-size: 95%;
-    padding-bottom: .35em;
-    padding-left: .25em;
-}
-
-nav {
-    width: 80%;
-    padding: 0 10% 0 10%;
-}
-
-#navMenu ul {
-    list-style-type: none;
-    padding: 1em 0;
-    text-align: center;
-    display: inline-block;
-}
-
-#navMenu ul li {
-    float: left;
-    padding: 0 1em;
-}
-
-#navMenu ul li a {
-    font-weight: bold;
-    color: rgb(13, 68, 80);
-    text-align: center;
-    display: block;
-    width: 175px;  /* formerly 175px */
-    padding: .5em 0;
-    text-decoration: none;
-    background-color:rgb(130, 192, 188);
-    border-radius: 25px;
-    border: 3px solid teal;
-}
-
-#navMenu ul li a.current {
-    color:rgb(150, 72, 193);
 }
 
 #toTop {
