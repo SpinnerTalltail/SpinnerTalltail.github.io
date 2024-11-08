@@ -3,58 +3,6 @@
     padding: 0;
 }
 
-/* Stopping the user from printing 
-   this web page.
-*/
-@media print {
-    html, body {
-        /* Hide the entire page. */
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 411px) {
-    #nav_menu {
-        display: none !important;
-    }
-    #mobile_menu {
-        display: block !important;
-    }
-    .slicknav_menu {
-        background-color: rgb(136, 220, 235) !important;
-    }
-    section img {
-        max-width: 200px !important;
-    }
-}
-
-@media only screen and (min-width: 412px) and (max-width: 520px){
-    li {
-        font-size: 85% !important;
-    }
-    #mobile_menu {
-        display: none;
-    }
-    #nav_menu {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 521px) {
-    /* Regular display values. */
-}
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 100%;
-    background: linear-gradient(-45deg, #FF5CC3, #D38BEE, #23a6d5, #F6B561);
-	background-size: 400% 400%;
-	animation: gradient01 30s cubic-bezier(.17,.66,1,.48) infinite;
-	height: 100vh;
-    width: 100%;
-    max-width: 2560px;
-}
-
 a {
     font-weight: bold;
 }
@@ -94,13 +42,29 @@ p {
 }
 
 ul {
-    margin: 0 0 1.5em 1.25em;
+    margin: 0 0 1.5em 0;
 }
 
 li {
     font-size: 95%;
     padding-bottom: .35em;
     padding-left: .25em;
+    /* Forthcoming list image to go here.
+    * The internet recommends a size of 1200px wide by 800px high.
+    * 3:2 aspect ratio.
+    * Should be under 3 MB.
+     */
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    background: linear-gradient(-45deg, #FF5CC3, #D38BEE, #23a6d5, #F6B561);
+	background-size: 400% 400%;
+	animation: gradient01 30s cubic-bezier(.17,.66,1,.48) infinite;
+	height: 100vh;
+    width: 100%;
+    max-width: 2560px;
 }
 
 header {
@@ -123,39 +87,6 @@ nav {
     width: 100%;
     max-width: 2560px;
     overflow: hidden;
-}
-
-#mobile_menu {
-    display: none;
-}
-
-#nav_menu ul {
-    list-style-type: none;
-    padding: 1em 0;
-    text-align: center;
-    display: inline-block;
-}
-
-#nav_menu ul li {
-    float: left;
-    padding: 0 1em;
-}
-
-#nav_menu ul li a {
-    font-weight: bold;
-    color: rgb(13, 68, 80);
-    text-align: center;
-    display: block;
-    width: 110%;  /* formerly 175px */
-    padding: .5em 0;
-    text-decoration: none;
-    background-color:rgb(130, 192, 188);
-    border-radius: 25px;
-    border: 3px solid teal;
-}
-
-#nav_menu ul li a.current {
-    color:rgb(150, 72, 193);
 }
 
 main {
@@ -196,6 +127,62 @@ section img {
     position: relative;
 }
 
+section li {
+    margin-left: 1em;
+}
+
+footer {
+    margin: 3em 1em 1em 1em;
+    padding: 10px;
+    border-top: 2px solid rgb(216, 191, 228);
+    clear: both;
+    /*TBD: Make a pixel grass and cat background that remains fixed
+      bedhind the footer as a background-image or 
+      background-attachment. page 163 */
+}
+
+footer p {
+    text-align: right;
+    text-indent:0%;
+    font-size: 80%;
+    margin: 1em 1em 1em 1em;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+    padding: 1em 0;
+    text-align: center;
+    display: inline-block;
+}
+
+#nav_menu ul li {
+    float: left;
+    padding: 0 1em;
+}
+
+#nav_menu ul li a {
+    font-weight: bold;
+    color: rgb(13, 68, 80);
+    text-align: center;
+    display: block;
+    width: 110%;  /* formerly 175px */
+    padding: .5em 0;
+    text-decoration: none;
+    background-color:rgb(130, 192, 188);
+    border-radius: 25px;
+    border: 3px solid teal;
+}
+
+#nav_menu ul li a.current {
+    color:rgb(150, 72, 193);
+}
+
+
+
 /* I just hated how it looked on different devices.
 aside {
     height: 200px;
@@ -215,23 +202,6 @@ aside h2, aside h3 {
 }
 
 */
-
-footer {
-    margin: 3em 1em 1em 1em;
-    padding: 10px;
-    border-top: 2px solid rgb(216, 191, 228);
-    clear: both;
-    /*TBD: Make a pixel grass and cat background that remains fixed
-      bedhind the footer as a background-image or 
-      background-attachment. page 163 */
-}
-
-footer p {
-    text-align: right;
-    text-indent:0%;
-    font-size: 80%;
-    margin: 1em 1em 1em 1em;
-}
 
 #toTop {
     text-align: center;
@@ -261,4 +231,45 @@ footer p {
     to {
         background-position: var(--bgSize) 0;
     }
+}
+
+/* Stopping the user from printing 
+   this web page.
+*/
+@media print {
+    html, body {
+        /* Hide the entire page. */
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 411px) {
+    #nav_menu {
+        display: none !important;
+    }
+    #mobile_menu {
+        display: block !important;
+    }
+    .slicknav_menu {
+        background-color: rgb(136, 220, 235) !important;
+    }
+    section img {
+        max-width: 200px !important;
+    }
+}
+
+@media only screen and (min-width: 412px) and (max-width: 520px){
+    li {
+        font-size: 85% !important;
+    }
+    #mobile_menu {
+        display: none;
+    }
+    #nav_menu {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 521px) {
+    /* Regular display values. */
 }
