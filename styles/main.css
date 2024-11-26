@@ -237,7 +237,7 @@ aside h2, aside h3 {
    this web page.
 */
 @media print {
-    html, body {
+    html, body, section {
         /* Hide the entire page. */
         display: none;
     }
