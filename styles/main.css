@@ -77,6 +77,19 @@ body {
     max-width: 2560px;
 }
 
+button {
+    font-weight: bold;
+    color: rgb(74, 13, 80);
+    text-align: left;
+    display: block;
+    padding: .5em 0.5em;
+    text-decoration: none;
+    background-color:rgb(184, 130, 192);
+    border-radius: 10px;
+    border: 3px solid rgb(128, 0, 124);
+    cursor: pointer;
+}
+
 header {
     text-align: center;
     text-decoration: underline;
@@ -249,6 +262,51 @@ aside h2, aside h3 {
         background-position: var(--bgSize) 0;
     }
 }
+
+
+.word_fade {
+    display: inline-block;
+    white-space: nowrap; /* Prevent internal line breaks */
+    opacity: 0;
+    animation: fadeWord 0.6s ease forwards;
+}
+
+@keyframes fadeWord {
+    from {
+        opacity: 0;
+        transform: translateY(0.5em);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+#prompt_output {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    margin-top: 2em; /* Space above the text */
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+.typewriter {
+    overflow: hidden; /* Hide the text initially */
+    white-space: nowrap; /* Prevent text wrapping */
+    margin: 0 auto; /* Center the text */
+    letter-spacing: .15em; /* Adjust for animation speed */
+    width: 0;                 /* Needed for animation start */
+    animation: typing 5.5s steps(30, end) forwards /* Typing animation */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
 
 
 

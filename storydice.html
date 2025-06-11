@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A portfolio project by Jessica Jones that uses HTML/CSS/JS to generate randomized story prompts.">
+        <title>Story Dice</title>
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/slicknav.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../scripts/jquery.slicknav.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Story Dice</h1>
+        </header>
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.html">Return</a></li>
+            </ul>
+        </nav>
+        <main>
+              <button id="roll_button">Roll for Prompt</button>
+              <p id="prompt_output" class="word_fade"></p>
+        </main>
+        <script src="../scripts/storydice.js"></script>
+    </body>
+</html>
