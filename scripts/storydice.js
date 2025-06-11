@@ -1,7 +1,7 @@
 // Prompts courtesy of my friends.
 const settings = ["an ancient forest", "a catastic city", "a haunted library", "a Minecraft mine", "a mushroom circle in the middle of the woods", "a PAX gaming room", "a brothel", "a Santeria church", "the ninth moon of Endor"];
 const characters = ["a lost cat", "an ancient sorceress", "a troubled AI", "a one-legged shoemaker named Joe", "a fruit bat with the tail of a skunk and rainbow wings", "an itinerant priest named Father Donal", "an Ewok named Wicket"];
-const twists = ["searching for a forgotten tome", "haunted by nightmares", "chased by invisible spirits", "sacrificing a leg to get attention of the fae", "doing something naughty", "totally lost but too proud to admit it", "worshipping the great shiny golden god fallen from the sky as foretold in legend"];
+const twists = ["searching for a forgotten tome", "haunted by nightmares", "chased by invisible spirits", "sacrificing a leg to get the attention of the fae", "doing something naughty", "totally lost but too proud to admit it", "worshipping the great shiny golden god fallen from the sky as foretold in legend"];
 
 function getRandomItem(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
