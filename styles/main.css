@@ -199,7 +199,7 @@ footer p {
     color: rgb(13, 68, 80);
     text-align: center;
     display: block;
-    width: 110%;  /* formerly 175px */
+    width: 100%;  /* formerly 175px */
     padding: .5em 0;
     text-decoration: none;
     background-color:rgb(130, 192, 188);
@@ -282,6 +282,15 @@ aside h2, aside h3 {
         transform: translateY(0);
         filter: blur(0);
     }
+}
+
+.story_text {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 1rem;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 #prompt_output {
